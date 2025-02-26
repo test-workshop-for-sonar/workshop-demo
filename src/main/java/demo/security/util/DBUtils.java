@@ -29,6 +29,7 @@ public class DBUtils {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(query);
         List<String> items = new ArrayList<String>();
+        System.out.println("testing");
         while (resultSet.next()){
             items.add(resultSet.getString(0));
         }
