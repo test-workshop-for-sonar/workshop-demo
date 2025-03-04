@@ -4,8 +4,14 @@ import javax.servlet.http.HttpServletRequest;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 public class DBUtils {
+    private static final String EMAIL_PATTERN =
+            "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+
+    private static final Pattern pattern = Pattern.compile(EMAIL_PATTERN);
 
     Connection connection;
     public DBUtils() throws SQLException {
@@ -34,5 +40,13 @@ public class DBUtils {
             items.add(resultSet.getString(0));
         }
         return items;
+    }
+
+    public static boolean isValidEmail(String email) {
+        if (email == null) {
+            return false;
+        }
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 }

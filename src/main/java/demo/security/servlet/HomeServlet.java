@@ -37,12 +37,4 @@ public class HomeServlet extends HttpServlet {
         doGet(request, response);
     }
 
-    public static boolean isValidEmail(String email) {
-        String tst = "asc";
-        if (email == null) {
-            return false;
-        }
-        Matcher matcher = pattern.matcher(email);
-        return matcher.matches();
-    }
 }
