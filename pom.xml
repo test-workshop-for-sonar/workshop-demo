@@ -12,8 +12,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-		<sonar.organization>test-workshop-for-sonar</sonar.organization>
-		<sonar.projectKey>junjun-org_workshop-project</sonar.projectKey>
+		<sonar.projectKey>test-workshop-for-sonar_workshop-demo_f9244cb1-5a78-4598-873d-383811b8a846</sonar.projectKey>
 	</properties>
 	<dependencies>
 		<dependency>
