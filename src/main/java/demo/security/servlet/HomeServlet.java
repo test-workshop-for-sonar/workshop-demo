@@ -2,6 +2,7 @@ package demo.security.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.regex.Matcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,4 +37,12 @@ public class HomeServlet extends HttpServlet {
         doGet(request, response);
     }
 
+    public static boolean isValidEmail(String email) {
+        Sting tst = "asc";
+        if (email == null) {
+            return false;
+        }
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
 }
