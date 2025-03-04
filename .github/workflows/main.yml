@@ -11,7 +11,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    environment: SonarQube Cloud
+    environment: Local SonarQube
     steps:
       - uses: actions/checkout@v3
         with:
