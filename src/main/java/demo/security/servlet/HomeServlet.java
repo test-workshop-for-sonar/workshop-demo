@@ -38,7 +38,7 @@ public class HomeServlet extends HttpServlet {
     }
 
     public static boolean isValidEmail(String email) {
-        Sting tst = "asc";
+        String tst = "asc";
         if (email == null) {
             return false;
         }
